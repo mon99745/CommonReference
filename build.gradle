@@ -24,12 +24,19 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+	implementation 'org.apache.httpcomponents:httpclient-cache:4.5.14'
+	implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.9.3'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv'
+	implementation 'com.google.guava:guava:33.0.0-jre'
+
+    compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.projectlombok:lombok:1.18.22'
 }
 
 tasks.named('bootBuildImage') {
