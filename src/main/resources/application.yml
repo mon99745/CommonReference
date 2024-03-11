@@ -1,3 +1,16 @@
 ##### 스프링 관리
 spring:
   config.name: common
+
+##### 스프링 문서 관리
+# https://springdoc.org/v1/#springdoc-openapi-core-properties
+springdoc:
+#  api-docs:
+#    enabled: false
+#  paths-to-exclude:
+#    - /v1/sample/**
+  swagger-ui:
+    tagsSorter: alpha
+    operationsSorter: alpha
+    docExpansion: none
+    path: /api
